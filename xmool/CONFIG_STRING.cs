@@ -25,6 +25,7 @@ class CONFIG_STRING
     public static string DOMAIN = "next.";
     public static string APDN1 = "account.next.";
 
+    /* empty by default */
     public static string COUNTRY = " ";
 
 

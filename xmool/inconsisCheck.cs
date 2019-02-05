@@ -9,7 +9,7 @@ using System.Xml;
 class inconsisCheck
 {
 
-    public XmlDocument docNonLive;
+    public XmlDocument docNonLive; //path
 
     /*
     public string ENV = ".auth03.test"; // the environment

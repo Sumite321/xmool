@@ -57,7 +57,7 @@ namespace xmool
                 Console.Write("Enter your new environmet: ");
                 CONFIG_STRING.ENV = Console.ReadLine();
 
-                Console.WriteLine("Your new env: " + CONFIG_STRING.ENV);
+                Console.WriteLine("Your new env: " + CONFIG_STRING.ENV); //33
                 Console.ReadKey();
 
             }
