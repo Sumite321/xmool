@@ -18,7 +18,6 @@ namespace xmool
         ***********************************************************************/
     class domainDiff
     {
-
         private static inconsisCheck checkIssues;
 
         static void Main(string[] args)
@@ -33,26 +32,59 @@ namespace xmool
             Console.WriteLine(" ");
             Console.WriteLine("Main menu");
             Console.WriteLine("1 - Check for inconsistency");
-            Console.WriteLine("2 - Update domain information");
+            Console.WriteLine("2 - View current domain information");
             Console.WriteLine("3 - Set environment");
 
-            ConsoleKey key = Console.ReadKey().Key;
+            ConsoleKey key;
 
-            if (key == ConsoleKey.D1)
+            try
             {
-                checkIssues = new inconsisCheck();
-                checkIssues.beginTask();
+                while ((key = Console.ReadKey().Key )!= ConsoleKey.D0)
+                {
+                    switch (key)
+                    {
 
+                        case ConsoleKey.D1:
+                            checkIssues = new inconsisCheck();
+                            checkIssues.beginTask();
+                            break;
+                        case ConsoleKey.D2:
+                            ViewDomainInformation();
+                            break;
+                        case ConsoleKey.D3:
+                            Console.Write("Enter your new environmet: ");
+                            CONFIG_STRING.ENV = Console.ReadLine();
+
+                            Console.WriteLine("Your new env: " + CONFIG_STRING.ENV); //33
+                            Console.ReadKey();
+                            break;
+                        default:
+                            print("Make a choice");
+                            break;
+
+                    }
+                }
             }
-            else if (key == ConsoleKey.D3)
+            catch (Exception e)
             {
-                //Console.ReadKey();
-                Console.Write("Enter your new environmet: ");
-                CONFIG_STRING.ENV = Console.ReadLine();
-
-                Console.WriteLine("Your new env: " + CONFIG_STRING.ENV); //33
-                Console.ReadKey();
+                e.GetBaseException();
             }
+
+        }
+
+        private static void ViewDomainInformation()
+        {
+            print(" ");
+            print("Env is" + CONFIG_STRING.ENV);
+            print("Domains are:" + CONFIG_STRING.DOMAIN + "and " + CONFIG_STRING.DOMAIN_DIRECT);
+            print("APND are: " + CONFIG_STRING.APDN + " and " + CONFIG_STRING.APDN1);
+            print("Cookie domain is: " + CONFIG_STRING.COOKIE_DOMAIN);
+            print("Top level domain is: " + CONFIG_STRING.TOP_LEVELDOMAIN);
+        }
+
+        private static void print(string s)
+        {
+            Console.WriteLine(s);
         }
     }
 }

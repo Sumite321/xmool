@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 class CONFIG_STRING
-{
+{   
     public static string ENV = ".auth03.test"; // the environment
 
     public static string PATH_ENV = "M:\\firstCompare\\forReview\\DomainConfig.AUTH03.xml";
