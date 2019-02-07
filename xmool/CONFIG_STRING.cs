@@ -12,14 +12,14 @@ class CONFIG_STRING
     public static string PATH_LIVE = "M:\\firstCompare\\forReview\\DomainLive.xml";
 
     /* DIRECT */
-    public static string DOMAIN_DIRECT = "nextdirect.com.auth03.test"; // **
+    public static string DOMAIN_DIRECT = "nextdirect.com"; // **
     public static string TOP_LEVELDOMAIN = ".com.auth03.test"; // **
-    public static string APDN = "account.nextdirect.auth03.test"; // **
-    public static string COOKIE_DOMAIN = "nextdirect.com.auth03.test"; // **
+    public static string APDN = "account.nextdirect"; // **
+    public static string COOKIE_DOMAIN = "nextdirect.com"; // **
 
     /* MOBILE */
-    public static string DOMAIN_MOBILE = "mobile.nextdirect.com.auth03.test"; // **
-    public static string APDN_M = "m-account.nextdirect.com.auth03.test"; // **
+    public static string DOMAIN_MOBILE = "mobile.nextdirect"; // **
+    public static string APDN_M = "m-account.nextdirect.com"; // **
 
     /* NON-DIRECT */
     public static string DOMAIN = "next.";
@@ -45,7 +45,6 @@ class CONFIG_STRING
 
     public static void setUpConfigsInMobile()
     {
-
         DOMAIN_MOBILE += ENV;
         APDN_M += ENV;
     }

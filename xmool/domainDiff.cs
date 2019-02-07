@@ -27,7 +27,6 @@ namespace xmool
             mainMenu();
         }
 
-
         private static void mainMenu()
         {
 
@@ -39,31 +38,21 @@ namespace xmool
 
             ConsoleKey key = Console.ReadKey().Key;
 
-
-
-
             if (key == ConsoleKey.D1)
             {
-
                 checkIssues = new inconsisCheck();
-
                 checkIssues.beginTask();
 
             }
             else if (key == ConsoleKey.D3)
             {
-
                 //Console.ReadKey();
                 Console.Write("Enter your new environmet: ");
                 CONFIG_STRING.ENV = Console.ReadLine();
 
                 Console.WriteLine("Your new env: " + CONFIG_STRING.ENV); //33
                 Console.ReadKey();
-
             }
-
-
-
         }
     }
 }
